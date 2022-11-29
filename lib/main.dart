@@ -12,7 +12,18 @@ class BMICalculator extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: const MaterialColor(0xFF0A0E21, {
+          50: Color.fromRGBO(0x0A, 0x0E, 0x21, .1),
+          100: Color.fromRGBO(0x0A, 0x0E, 0x21, .2),
+          200: Color.fromRGBO(0x0A, 0x0E, 0x21, .3),
+          300: Color.fromRGBO(0x0A, 0x0E, 0x21, .4),
+          400: Color.fromRGBO(0x0A, 0x0E, 0x21, .5),
+          500: Color.fromRGBO(0x0A, 0x0E, 0x21, .6),
+          600: Color.fromRGBO(0x0A, 0x0E, 0x21, .7),
+          700: Color.fromRGBO(0x0A, 0x0E, 0x21, .8),
+          800: Color.fromRGBO(0x0A, 0x0E, 0x21, .9),
+          900: Color.fromRGBO(0x0A, 0x0E, 0x21, 1),
+        }),
       ),
       home: const InputPage(),
     );
