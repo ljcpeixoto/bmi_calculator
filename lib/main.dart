@@ -43,7 +43,11 @@ class _InputPageState extends State<InputPage> {
         ),
       ),
       floatingActionButton: Theme(
-        data: ThemeData.light(),
+        data: ThemeData.dark().copyWith(
+          colorScheme: const ColorScheme.dark().copyWith(
+            secondary: Colors.purple,
+          ),
+        ),
         child: const FloatingActionButton(
           onPressed: null,
           child: Icon(Icons.add),
