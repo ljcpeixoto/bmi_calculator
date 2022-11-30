@@ -12,9 +12,8 @@ class BMICalculator extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
-        colorScheme: ColorScheme.fromSwatch().copyWith(
+        colorScheme: const ColorScheme.dark().copyWith(
           primary: const Color(0xFF0A0E21),
-          secondary: Colors.purple,
         ),
       ),
       home: const InputPage(),
@@ -43,9 +42,12 @@ class _InputPageState extends State<InputPage> {
           'Body text',
         ),
       ),
-      floatingActionButton: const FloatingActionButton(
-        onPressed: null,
-        child: Icon(Icons.add),
+      floatingActionButton: Theme(
+        data: ThemeData.light(),
+        child: const FloatingActionButton(
+          onPressed: null,
+          child: Icon(Icons.add),
+        ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
