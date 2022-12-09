@@ -19,16 +19,7 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  var maleCardColor = inactiveCardColor;
-  var femaleCardColor = inactiveCardColor;
   Gender? selectedGender;
-
-  updateGenderCards() {
-    maleCardColor =
-        selectedGender == Gender.male ? activeCardColor : inactiveCardColor;
-    femaleCardColor =
-        selectedGender == Gender.female ? activeCardColor : inactiveCardColor;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,34 +37,36 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: GestureDetector(
                     child: ReusableCard(
-                      colour: maleCardColor,
+                      colour: selectedGender == Gender.male
+                          ? activeCardColor
+                          : inactiveCardColor,
                       cardChild: const IconContent(
                         icon: FontAwesomeIcons.mars,
                         iconText: 'MALE',
                       ),
                     ),
                     onTap: () {
-                      selectedGender = Gender.male;
-                      setState(
-                        updateGenderCards,
-                      );
+                      setState(() {
+                        selectedGender = Gender.male;
+                      });
                     },
                   ),
                 ),
                 Expanded(
                   child: GestureDetector(
                     child: ReusableCard(
-                      colour: femaleCardColor,
+                      colour: selectedGender == Gender.female
+                          ? activeCardColor
+                          : inactiveCardColor,
                       cardChild: const IconContent(
                         icon: FontAwesomeIcons.venus,
                         iconText: 'FEMALE',
                       ),
                     ),
                     onTap: () {
-                      selectedGender = Gender.female;
-                      setState(
-                        updateGenderCards,
-                      );
+                      setState(() {
+                        selectedGender = Gender.female;
+                      });
                     },
                   ),
                 ),
