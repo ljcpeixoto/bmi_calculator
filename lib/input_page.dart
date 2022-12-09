@@ -6,7 +6,7 @@ import 'reusable_card.dart';
 
 const bottomContainerHeight = 80.0;
 const bottomContainerColor = Color(0xFFEB1555);
-const activeCardColor = Color(0xFF1D1E33);
+const activeCardColor = Color(0xFF2D2E43);
 const inactiveCardColor = Color(0xFF111328);
 
 enum Gender { male, female }
