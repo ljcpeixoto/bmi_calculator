@@ -1,4 +1,3 @@
-import 'package:bmi_calculator/results_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -232,11 +231,10 @@ class _InputPageState extends State<InputPage> {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const ResultsPage(),
-                  ));
+              Navigator.pushNamed(
+                context,
+                'results',
+              );
             },
             child: Container(
               color: kBottomContainerColor,
