@@ -237,11 +237,15 @@ class _InputPageState extends State<InputPage> {
               );
             },
             child: Container(
+              alignment: Alignment.center,
               color: kBottomContainerColor,
               margin: const EdgeInsets.only(top: 10.0),
               width: double.infinity,
               height: kBottomContainerHeight,
-              child: const Text('CALCULATE'),
+              child: const Text(
+                'CALCULATE',
+                style: kLargeButtonTextStyle,
+              ),
             ),
           ),
         ],
