@@ -1,4 +1,5 @@
 import 'package:bmi_calculator/components/reusable_card.dart';
+import 'package:bmi_calculator/screens/results_arguments.dart';
 import 'package:flutter/material.dart';
 
 import '../components/bottom_button.dart';
@@ -9,6 +10,7 @@ class ResultsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final args = ModalRoute.of(context)!.settings.arguments as ResultsArguments;
     return Scaffold(
       appBar: AppBar(
         title: const Text('RESULTS'),
@@ -31,18 +33,18 @@ class ResultsPage extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
+                  children: [
                     Text(
-                      'Overweight',
-                      style: kOverweightTextStyle,
+                      args.calculatorBrain.getResult(),
+                      style: args.calculatorBrain.getResultTextStyle(),
                     ),
                     Text(
-                      '26.7',
+                      args.calculatorBrain.getBMI(),
                       style: kResultTextStyle,
                     ),
                     Text(
-                      'You have a higher than normal body weight. Try to exercise more.',
-                      style: kSuggestionTextStyle,
+                      args.calculatorBrain.getInterpretation(),
+                      style: kInterpretationTextStyle,
                     )
                   ],
                 ),

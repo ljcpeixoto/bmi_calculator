@@ -31,11 +31,23 @@ const kOverweightTextStyle = TextStyle(
   color: Colors.red,
 );
 
+const kNormalWeightTextStyle = TextStyle(
+  fontSize: 40.0,
+  fontWeight: FontWeight.bold,
+  color: Colors.green,
+);
+
+const kUnderweightTextStyle = TextStyle(
+  fontSize: 40.0,
+  fontWeight: FontWeight.bold,
+  color: Colors.yellow,
+);
+
 const kResultTextStyle = TextStyle(
   fontSize: 80.0,
   fontWeight: FontWeight.bold,
 );
 
-const kSuggestionTextStyle = TextStyle(
+const kInterpretationTextStyle = TextStyle(
   fontSize: 25.0,
 );
