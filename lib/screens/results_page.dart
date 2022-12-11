@@ -20,9 +20,11 @@ class ResultsPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           const Expanded(
-            child: Text(
-              'Your Result',
-              style: kPageTitleTextStyle,
+            child: Center(
+              child: Text(
+                'Your Result',
+                style: kPageTitleTextStyle,
+              ),
             ),
           ),
           Expanded(
